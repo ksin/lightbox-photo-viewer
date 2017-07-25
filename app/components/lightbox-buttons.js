@@ -1,4 +1,5 @@
 import { createElement } from '../utils/dom-helpers.js';
+import KEY_CODES from '../utils/key-codes';
 
 /*
   LightboxButtons
@@ -50,15 +51,15 @@ export default class LightboxButtons {
   setupKeyboardEvents() {
     this.keyupEvent = (e) => {
       switch(e.keyCode) {
-        case 37:
+        case KEY_CODES.left_arrow:
           if (this.index === 0) { return; }
           this.onChange(this.index - 1);
           break;
-        case 39:
+        case KEY_CODES.right_arrow:
           if (this.index === this.max - 1) { return; }
           this.onChange(this.index + 1);
           break;
-        case 27:
+        case KEY_CODES.escape:
           this.close();
           break;
       }
