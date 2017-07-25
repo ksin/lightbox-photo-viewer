@@ -16,7 +16,6 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/, loader: "style-loader!css-loader", exclude: /node_modules/ },
       {
         test: /\.(ttf|eot|woff|woff2|otf)$/,
