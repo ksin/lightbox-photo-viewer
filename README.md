@@ -24,3 +24,7 @@ You will need the following things properly installed on your computer.
 * `npm run build`
 
 This command will create assets in a `dist/` folder which you can deploy as static assets anywhere (ie: to s3). The entry point of the app is `index.html`. Try `open dist/index.html` to see your build work.
+
+## Reading Notes
+
+The entry point for the app is `app/index.js`, which is a script added to `app/index.html` using the HtmlWebpackPlugin. Everything else is imported properly as modules and should be easy to follow from there. Feel free to reach out otherwise!
