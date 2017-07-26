@@ -11,7 +11,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* git clone `ttps://github.com/ksin/lightbox-photo-viewer.git`
+* git clone `https://github.com/ksin/lightbox-photo-viewer.git`
 * `cd lightbox-photo-viewer`
 * `yarn install` or `npm install` if you prefer
 * Configure your secrets to use Flickr's api.  See `sample.secrets.js`
