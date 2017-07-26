@@ -9,7 +9,7 @@ import { flickrPhotoUrl } from '../utils/flickr-photo-url.js';
 */
 
 export default class PhotoThumbnail {
-  constructor(photo, onClick) {
+  constructor({ photo, onClick }) {
     this.photo = photo;
     this.onClick = onClick;
   }

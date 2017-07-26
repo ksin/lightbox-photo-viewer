@@ -19,7 +19,7 @@ export default class FlickrPhotoset {
 
     new FlickrAPIAdapter().fetchPhotos()
       .then((photos) => {
-        el.appendChild(new PhotoGrid(photos).render());
+        el.appendChild(new PhotoGrid({ photos }).render());
       })
       .catch((error) => {
         el.appendChild(createElement('h2', { className: 'error', text: `Status: ${error} - There was an error getting the photos :(`}));

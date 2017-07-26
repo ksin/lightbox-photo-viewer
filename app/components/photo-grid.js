@@ -10,17 +10,19 @@ import { createElement } from '../utils/dom-helpers.js';
 */
 
 export default class PhotoGrid {
-  constructor(photos) {
+  constructor({ photos }) {
     this.photos = photos;
   }
 
   render() {
     const el = createElement('div', { className: 'photo-grid' });
+    const photos = this.photos;
 
-    this.photos.forEach((photo) => {
-      const photoThumbnail = new PhotoThumbnail(photo, (photo) => {
-        el.appendChild(new Lightbox(photo, this.photos).render());
-      });
+    photos.forEach((photo) => {
+      const onClick = (photo) => {
+        el.appendChild(new Lightbox({ photo, photos }).render());
+      }
+      const photoThumbnail = new PhotoThumbnail({ photo, onClick });
 
       el.appendChild(photoThumbnail.render());
     });

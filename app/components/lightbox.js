@@ -9,7 +9,7 @@ import LightboxButtons from './lightbox-buttons.js';
 */
 
 export default class Lightbox {
-  constructor(photo, photos) {
+  constructor({ photo, photos }) {
     this.photo = photo;
     this.photos = photos;
   }
