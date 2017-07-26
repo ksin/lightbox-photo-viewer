@@ -26,7 +26,7 @@ export default class Lightbox {
     const lightboxButtons = new LightboxButtons({
       index: this.photos.indexOf(this.photo),
       max: this.photos.length,
-      change: (photo) => { this.updateDisplayedPhoto(photo); },
+      change: (index) => { this.updateDisplayedPhoto(index); },
       close: () => {
         el.className += ' fade-out';
         setTimeout(() => {
