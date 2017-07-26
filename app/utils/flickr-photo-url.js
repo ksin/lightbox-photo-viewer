@@ -15,10 +15,10 @@ export function flickrPhotoUrl(photo, suffix) {
     '.jpg';
 }
 
-export function dynamicFlickrPhotoUrl(photo) {
+export function dynamicFlickrPhotoUrl(photo, width) {
     let photoUrl; // load medium or large photo depending on window size
 
-    if (window.innerWidth > 640) {
+    if (width > 640) {
       photoUrl = flickrPhotoUrl(photo, 'b');
     } else {
       photoUrl = flickrPhotoUrl(photo, 'z');
